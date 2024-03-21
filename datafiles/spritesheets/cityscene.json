@@ -1,0 +1,189 @@
+{
+	"textures": [
+		{
+			"texture": "cityscene.png",
+			"frames": {
+				"Background.png": {
+					"size": { "w": 2044, "h": 1536 },
+					"frame": { "x": 1, "y": 1, "w": 2044, "h": 1536 },
+					"offset": { "x": 0, "y": 0 },
+					"rotated": false
+				},
+				"capguy/walk/0015.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1, "y": 1539, "w": 161, "h": 319 },
+					"offset": { "x": 22, "y": 1 },
+					"rotated": false
+				},
+				"capguy/walk/0016.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1, "y": 1539, "w": 161, "h": 319 },
+					"offset": { "x": 22, "y": 1 },
+					"rotated": false
+				},
+				"capguy/walk/0003.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 164, "y": 1539, "w": 168, "h": 303 },
+					"offset": { "x": 0, "y": 8 },
+					"rotated": false
+				},
+				"capguy/walk/0004.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 164, "y": 1539, "w": 168, "h": 303 },
+					"offset": { "x": 0, "y": 8 },
+					"rotated": false
+				},
+				"capguy/turn/0001.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 334, "y": 1539, "w": 167, "h": 302 },
+					"offset": { "x": 20, "y": 11 },
+					"rotated": false
+				},
+				"capguy/turn/0002.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 334, "y": 1539, "w": 167, "h": 302 },
+					"offset": { "x": 20, "y": 11 },
+					"rotated": false
+				},
+				"capguy/walk/0001.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 503, "y": 1539, "w": 158, "h": 316 },
+					"offset": { "x": 15, "y": 3 },
+					"rotated": false
+				},
+				"capguy/walk/0002.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 503, "y": 1539, "w": 158, "h": 316 },
+					"offset": { "x": 15, "y": 3 },
+					"rotated": false
+				},
+				"capguy/walk/0005.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 663, "y": 1539, "w": 152, "h": 307 },
+					"offset": { "x": 26, "y": 2 },
+					"rotated": false
+				},
+				"capguy/walk/0006.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 663, "y": 1539, "w": 152, "h": 307 },
+					"offset": { "x": 26, "y": 2 },
+					"rotated": false
+				},
+				"capguy/turn/0011.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 817, "y": 1539, "w": 151, "h": 307 },
+					"offset": { "x": 0, "y": 5 },
+					"rotated": false
+				},
+				"capguy/turn/0012.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 817, "y": 1539, "w": 151, "h": 307 },
+					"offset": { "x": 0, "y": 5 },
+					"rotated": false
+				},
+				"capguy/walk/0013.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 970, "y": 1539, "w": 146, "h": 314 },
+					"offset": { "x": 32, "y": 2 },
+					"rotated": false
+				},
+				"capguy/walk/0014.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 970, "y": 1539, "w": 146, "h": 314 },
+					"offset": { "x": 32, "y": 2 },
+					"rotated": false
+				},
+				"capguy/walk/0009.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1118, "y": 1539, "w": 139, "h": 311 },
+					"offset": { "x": 33, "y": 3 },
+					"rotated": false
+				},
+				"capguy/walk/0010.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1118, "y": 1539, "w": 139, "h": 311 },
+					"offset": { "x": 33, "y": 3 },
+					"rotated": false
+				},
+				"capguy/turn/0003.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1259, "y": 1539, "w": 141, "h": 306 },
+					"offset": { "x": 38, "y": 5 },
+					"rotated": false
+				},
+				"capguy/turn/0004.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1259, "y": 1539, "w": 141, "h": 306 },
+					"offset": { "x": 38, "y": 5 },
+					"rotated": false
+				},
+				"capguy/walk/0007.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1402, "y": 1539, "w": 141, "h": 306 },
+					"offset": { "x": 42, "y": 1 },
+					"rotated": false
+				},
+				"capguy/walk/0008.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1402, "y": 1539, "w": 141, "h": 306 },
+					"offset": { "x": 42, "y": 1 },
+					"rotated": false
+				},
+				"capguy/walk/0011.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1545, "y": 1539, "w": 135, "h": 311 },
+					"offset": { "x": 29, "y": 8 },
+					"rotated": false
+				},
+				"capguy/walk/0012.png": {
+					"size": { "w": 187, "h": 324 },
+					"frame": { "x": 1545, "y": 1539, "w": 135, "h": 311 },
+					"offset": { "x": 29, "y": 8 },
+					"rotated": false
+				},
+				"capguy/turn/0007.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1682, "y": 1539, "w": 314, "h": 129 },
+					"offset": { "x": 6, "y": 0 },
+					"rotated": true
+				},
+				"capguy/turn/0008.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1682, "y": 1539, "w": 314, "h": 129 },
+					"offset": { "x": 6, "y": 0 },
+					"rotated": true
+				},
+				"capguy/turn/0005.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1682, "y": 1670, "w": 312, "h": 126 },
+					"offset": { "x": 30, "y": 0 },
+					"rotated": true
+				},
+				"capguy/turn/0006.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1682, "y": 1670, "w": 312, "h": 126 },
+					"offset": { "x": 30, "y": 0 },
+					"rotated": true
+				},
+				"capguy/turn/0009.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1682, "y": 1798, "w": 300, "h": 129 },
+					"offset": { "x": 11, "y": 13 },
+					"rotated": true
+				},
+				"capguy/turn/0010.png": {
+					"size": { "w": 207, "h": 329 },
+					"frame": { "x": 1682, "y": 1798, "w": 300, "h": 129 },
+					"offset": { "x": 11, "y": 13 },
+					"rotated": true
+				}
+			}
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"exporter": "gamemaker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:9ecf60721c9d71fa07bf32ebd3cde20c:ac7608d1f04ab193bff21724566c15eb:292542e6853f316339413b9243f95b10$"
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"SpriteSheetLoader",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SpriteSheetLoader",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
