@@ -11,21 +11,21 @@
 function tp_load_texture_atlas(_data_file)
 {
 	var _json = _tp_read_file_as_json(_data_file);
-	if (!ds_map_exists(_json, "meta") ||
-	    _json[? "meta"][? "exporter"] != "gamemaker" ||
-	    _json[? "meta"][? "version"] != "1.0")
+	if (!struct_exists(_json, "meta") ||
+		struct_get(_json.meta, "exporter") != "gamemaker" ||
+	    struct_get(_json.meta, "version") != "1.0")
 	{
 		show_error("Invalid JSON file format: " + _data_file + "\nPlease use 'GameMaker' data format in TexturePacker.", true);
 	}
 	// multi-pack not yet supported, load first texture
-	var _tex_file = filename_path(_data_file) +  _json[? "textures"][| 0][? "texture"];
+	var _tex_file = filename_path(_data_file) +  _json.textures[0].texture;
 
     var _texture = sprite_add(_tex_file, 1, false, false, 0, 0);
 	if (_texture == -1)
 	{
 		show_error("Failed to load texture file: " + _tex_file, true);
 	}
-	_json[? "textures"][| 0][? "texture_image"] = _texture;
+	_json.textures[0].texture_image = _texture;
 	return _json;
 }
 	
@@ -38,33 +38,31 @@ function tp_draw_sprite_from_atlas(_atlas, _sprite_name, _x, _y, _scale_x, _scal
 	_scale_y ??= 1;
 	_angle ??= 0;
 	
-	var _tex = _atlas[? "textures"][| 0];
-	var _img = _tex[? "texture_image"];
+	var _tex = _atlas.textures[0];
+	var _img = _tex.texture_image;
 	
-	var _data = _tex[? "frames"][? _sprite_name];
+	var _data = struct_get(_tex.frames, _sprite_name);
 	if (_data == undefined)
 	{
 		show_message("Sprite '" + _sprite_name + "' not found in atlas");
 		game_end();
 		return;
 	}
-	var _frame_x = _data[? "frame"][? "x"];
-	var _frame_y = _data[? "frame"][? "y"];
-	var _frame_w = _data[? "frame"][? "w"];
-	var _frame_h = _data[? "frame"][? "h"];
+	var _frame_x = _data.frame.x;
+	var _frame_y = _data.frame.y;
+	var _frame_w = _data.frame.w;
+	var _frame_h = _data.frame.h;
 	
 	// add trimmed margin
-	var _offset = { x: _data[? "offset"][? "x"] * _scale_x,
-				    y: _data[? "offset"][? "y"] * _scale_y };
+	var _offset = { x: _data.offset.x * _scale_x,
+				    y: _data.offset.y * _scale_y };
 	var _rotated_offset = _tp_rotate_vector(_offset, -_angle);
 	
-	show_debug_message("offset: {0}, rotated: {1}", _offset, _rotated_offset);
-
 	_x += _rotated_offset.x;
 	_y += _rotated_offset.y;
 	
 	// sprite rotated on sheet?
-	var _rotated = _data[? "rotated"];
+	var _rotated = _data.rotated;
 	_angle += _rotated ? 90 : 0;
 	_y += _rotated ? _frame_h : 0;
 	
@@ -75,11 +73,8 @@ function tp_draw_sprite_from_atlas(_atlas, _sprite_name, _x, _y, _scale_x, _scal
 // release memory of texture and sprite sheet data
 function tp_release_texture_atlas(_atlas)
 {
-	var _tex = _atlas[? "textures"][| 0];
-	var _img = _tex[? "texture_image"];
-
+	var _img = _atlas.textures[0].texture_image;
 	sprite_delete(_img);
-	ds_map_destroy(_atlas);
 }
 
 
@@ -100,7 +95,7 @@ function _tp_read_file_as_json(_file_name)  // returns ds_map
         }
         file_text_close(_file_handle);
         
-        _json_content = json_decode(_file_content);
+        _json_content = json_parse(_file_content);
         if (_json_content == undefined) 
         {
             show_error("Failed to parse JSON in file: " + _file_name, true);
