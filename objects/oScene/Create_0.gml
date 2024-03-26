@@ -1,3 +1,4 @@
+/// @description Load atlas, create layer
 
 global.atlas_cityscene = tp_load_texture_atlas("spritesheets/cityscene.json");
 
