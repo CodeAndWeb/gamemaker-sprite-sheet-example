@@ -56,17 +56,26 @@ function tp_draw_sprite_from_atlas(_atlas, _sprite_name, _x, _y, _scale_x, _scal
 	// add trimmed margin
 	var _offset = { x: _data.offset.x * _scale_x,
 				    y: _data.offset.y * _scale_y };
+
+	if (_data.rotated)
+	{
+		_offset.y += _frame_w * _scale_y;
+	}
+					
 	var _rotated_offset = _tp_rotate_vector(_offset, -_angle);
 	
 	_x += _rotated_offset.x;
 	_y += _rotated_offset.y;
 	
-	// sprite rotated on sheet?
-	var _rotated = _data.rotated;
-	_angle += _rotated ? 90 : 0;
-	_y += _rotated ? _frame_h : 0;
-	
-	draw_sprite_general(_img, 0, _frame_x,_frame_y,_frame_w,_frame_h, _x,_y, _scale_x, _scale_y, _angle, c_white,c_white,c_white,c_white,1);
+	if (_data.rotated)
+	{
+		// rotated sprite: swap scale_x/y
+		draw_sprite_general(_img, 0, _frame_x,_frame_y,_frame_w,_frame_h, _x,_y, _scale_y, _scale_x, _angle+90, c_white,c_white,c_white,c_white,1);
+	}
+	else
+	{
+		draw_sprite_general(_img, 0, _frame_x,_frame_y,_frame_w,_frame_h, _x,_y, _scale_x, _scale_y, _angle, c_white,c_white,c_white,c_white,1);
+	}
 }
 
 
